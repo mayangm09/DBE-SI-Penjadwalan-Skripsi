@@ -42,7 +42,7 @@ Berikut adalah diagram ERD dari sistem ini:
 
 ### 🗓️ Jadwal_Sidang
 - `id_jadwal` (PK) - `int(5)`
-- `npm` (FK ke Mahasiswa) - `varchar(9)` ✅ One to One
+- `npm` (FK ke Mahasiswa) - `varchar(9)` 
 - `kode_ruangan` (FK ke Ruangan) - `char(6)`
 - `waktu_sidang` - `timestamp`
 

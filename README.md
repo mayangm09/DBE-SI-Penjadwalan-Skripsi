@@ -8,7 +8,8 @@ Sistem ini dirancang untuk mengelola **jadwal sidang skripsi mahasiswa**, termas
 
 Berikut adalah diagram ERD dari sistem ini:
 
-![ERD](./path-ke-gambar/erd.png) <!-- Ganti dengan path file ERD kamu -->
+![ERD](![SI Penjadwalan Skripsi Otomatis drawio](https://github.com/user-attachments/assets/ebbed26f-d0e2-41db-8368-d65c5a9c3265)
+) <!-- Ganti dengan path file ERD kamu -->
 
 ---
 

@@ -1,6 +1,6 @@
 # 🎓📚 Sistem Informasi Jadwal Sidang Skripsi
 
-Sistem ini dirancang untuk mengelola **jadwal sidang skripsi mahasiswa**, termasuk pengaturan dosen penguji, ruangan, dan pengguna sistem. Proyek ini menyederhanakan alur manajemen akademik dalam proses sidang skripsi.
+Sistem ini dirancang untuk mengelola **jadwal sidang skripsi mahasiswa**, termasuk menentukan peran dosen penguji, ruangan, dan pendataan mahasiswa. Proyek ini menyederhanakan alur manajemen akademik dalam proses sidang skripsi.
 
 ---
 

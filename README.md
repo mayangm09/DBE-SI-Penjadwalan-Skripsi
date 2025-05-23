@@ -12,6 +12,59 @@ Berikut adalah diagram ERD dari sistem ini:
 
 
 ---
+# 📊 Langkah-Langkah Membuat Database Menggunakan Navicat
+
+Panduan ini menjelaskan langkah-langkah dasar untuk membuat database menggunakan **Navicat** mulai dari proses instalasi hingga pembuatan database.
+
+---
+
+## 🔽 1. Download dan Install Navicat
+
+Unduh Navicat sesuai versi yang kamu butuhkan:
+
+- [Navicat for MySQL (Windows)](https://www.navicat.com/en/products/navicat-for-mysql)
+- [Navicat for MySQL (macOS)](https://www.navicat.com/en/products/navicat-for-mysql/mac)
+
+> Jika menggunakan versi trial, kamu bisa klik "Free Trial" untuk mencoba gratis.
+
+---
+
+## ⚙️ 2. Jalankan Navicat
+
+Setelah instalasi selesai, buka aplikasi **Navicat**.
+
+---
+
+## 🔌 3. Buat Koneksi Baru ke MySQL
+
+1. Klik tombol **Connection → MySQL**.
+2. Masukkan detail koneksi:
+   - **Connection Name**: bebas (contoh: `localhost`)
+   - **Host**: `127.0.0.1` atau `localhost`
+   - **Port**: `3306`
+   - **User**: `root`
+   - **Password**: sesuaikan dengan yang kamu pakai di MySQL
+3. Klik **Test Connection** → Jika berhasil, klik **OK**.
+
+---
+
+## 🗃️ 4. Membuat Database Baru
+
+1. Klik kanan pada koneksi MySQL yang telah dibuat.
+2. Pilih **New Database**.
+3. Isi nama database (contoh: `penjadwalan_sidang`).
+4. Klik **OK**.
+
+---
+
+## ✅ 5. Selesai
+
+Database berhasil dibuat! Selanjutnya kamu bisa membuat tabel, relasi, dan mengatur datanya sesuai kebutuhanmu.
+
+---
+
+> 📌 Pastikan MySQL sudah aktif sebelum menghubungkan Navicat ke server MySQL lokal (biasanya lewat XAMPP, Laragon, dll).
+
 
 ## 🛠️ Struktur Tabel
 

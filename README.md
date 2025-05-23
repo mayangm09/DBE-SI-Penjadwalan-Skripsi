@@ -64,7 +64,6 @@ Database berhasil dibuat! Selanjutnya kamu bisa membuat tabel, relasi, dan menga
 - `judul_skripsi` - `varchar(150)`
 - `email` - `varchar(30)`
 
----
 
 ### 👤 User
 - `id_user` (PK) - `int(5)`
@@ -72,7 +71,6 @@ Database berhasil dibuat! Selanjutnya kamu bisa membuat tabel, relasi, dan menga
 - `password` - `varchar(30)`
 - `role` - `enum` (`mahasiswa`, `dosen`, `admin`)
 
----
 
 ### 👨‍🏫 Dosen
 - `nidn` (PK) - `varchar(10)`
@@ -80,7 +78,6 @@ Database berhasil dibuat! Selanjutnya kamu bisa membuat tabel, relasi, dan menga
 - `program_studi` - `enum`
 - `email` - `varchar(30)`
 
----
 
 ### 🗓️ Jadwal_Sidang
 - `id_jadwal` (PK) - `int(5)`
@@ -88,13 +85,12 @@ Database berhasil dibuat! Selanjutnya kamu bisa membuat tabel, relasi, dan menga
 - `kode_ruangan` (FK ke Ruangan) - `char(6)`
 - `waktu_sidang` - `timestamp`
 
----
 
 ### 🏢 Ruangan
 - `kode_ruangan` (PK) - `char(6)`
 - `nama_ruangan` - `varchar(40)`
 
----
+
 
 ### 🧑‍⚖️ Penguji_Sidang
 - `id_penguji` (PK) - `int(5)`
@@ -359,7 +355,6 @@ GROUP BY js.id_jadwal, m.npm, m.nama_mahasiswa, m.program_studi, js.waktu_sidang
 ✅ Sistem ini mendukung pengelolaan sidang yang terstruktur dan otomatis.  
 🛠️ Dengan **TRIGGER**, **JOIN**, dan **VIEW**, pengelolaan data lebih efisien dan minim kesalahan.  
 
----
 
 
 

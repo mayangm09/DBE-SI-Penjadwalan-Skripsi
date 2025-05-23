@@ -2,22 +2,19 @@
 
 Sistem ini dirancang untuk mengelola **jadwal sidang skripsi mahasiswa**, termasuk menentukan peran dosen penguji, ruangan, dan pendataan mahasiswa. Proyek ini menyederhanakan alur manajemen akademik dalam proses sidang skripsi.
 
----
-
 ## 🗂️ Entity Relationship Diagram (ERD)
 
 Berikut adalah diagram ERD dari sistem ini:
 
 ![SI Penjadwalan Skripsi Otomatis drawio](https://github.com/user-attachments/assets/ebbed26f-d0e2-41db-8368-d65c5a9c3265)
 
-
 ---
+
 # 📊 Langkah-Langkah Membuat Database Menggunakan Navicat
 
 Panduan ini menjelaskan langkah-langkah dasar untuk membuat database menggunakan **Navicat** mulai dari proses instalasi hingga pembuatan database.
 
-
-## 🔽 1. Download dan Install Navicat
+## 1. Download dan Install Navicat
 
 Unduh Navicat sesuai versi yang kamu butuhkan:
 
@@ -26,12 +23,12 @@ Unduh Navicat sesuai versi yang kamu butuhkan:
 
 > Jika menggunakan versi trial, kamu bisa klik "Free Trial" untuk mencoba gratis.
 
-## ⚙️ 2. Jalankan Navicat
+##  2. Jalankan Navicat
 
 Setelah instalasi selesai, buka aplikasi **Navicat**.
 
 
-## 🔌 3. Buat Koneksi Baru ke MySQL
+## 3. Buat Koneksi Baru ke MySQL
 
 1. Klik tombol **Connection → MySQL**.
 2. Masukkan detail koneksi:
@@ -42,8 +39,7 @@ Setelah instalasi selesai, buka aplikasi **Navicat**.
    - **Password**: sesuaikan dengan yang kamu pakai di MySQL
 3. Klik **Test Connection** → Jika berhasil, klik **OK**.
 
-
-## 🗃️ 4. Membuat Database Baru
+##  4. Membuat Database Baru
 
 1. Klik kanan pada koneksi MySQL yang telah dibuat.
 2. Pilih **New Database**.
@@ -51,13 +47,13 @@ Setelah instalasi selesai, buka aplikasi **Navicat**.
 4. Klik **OK**.
 
 
-## ✅ 5. Selesai
+## 5. Selesai
 
 Database berhasil dibuat! Selanjutnya kamu bisa membuat tabel, relasi, dan mengatur datanya sesuai kebutuhanmu.
 
 
 > 📌 Pastikan MySQL sudah aktif sebelum menghubungkan Navicat ke server MySQL lokal (biasanya lewat XAMPP, Laragon, dll).
-
+---
 
 ## 🛠️ Struktur Tabel
 
@@ -122,8 +118,6 @@ Database berhasil dibuat! Selanjutnya kamu bisa membuat tabel, relasi, dan menga
 # 📚 Dokumentasi Skrip SQL - Sistem Penjadwalan Sidang Skripsi
 
 Dokumentasi ini menjelaskan struktur database dan penggunaan perintah SQL dalam sistem penjadwalan sidang skripsi. Sistem ini membantu mengelola data mahasiswa, dosen, jadwal sidang, dan penguji secara otomatis dan konsisten.
-
----
 
 ## 🧱 1. CREATE TABLE – Membuat Struktur Tabel
 
@@ -198,7 +192,6 @@ CREATE TABLE penguji_sidang (
 );
 ```
 
----
 
 ## ⚙️ 2. TRIGGER – Menjaga Otomatisasi & Konsistensi Data
 
@@ -263,8 +256,6 @@ FOR EACH ROW
 DELETE FROM User WHERE username = OLD.nidn;
 ```
 
----
-
 ## 📝 3. INSERT DATA – Menambahkan Data Awal
 
 Untuk keperluan testing atau demo, berikut contoh perintah `INSERT`:
@@ -287,7 +278,6 @@ INSERT INTO User (username, password, role) VALUES
 ('admin', '5678', 'admin');
 ```
 
----
 
 ## 🔗 4. JOIN – Menggabungkan Data dari Beberapa Tabel
 
@@ -323,8 +313,6 @@ JOIN penguji_sidang ps ON js.id_jadwal = ps.id_jadwal
 JOIN dosen d ON ps.nidn = d.nidn 
 GROUP BY js.id_jadwal, m.npm, m.nama_mahasiswa, m.program_studi, js.waktu_sidang, r.nama_ruangan;
 ```
-
----
 
 ## 👁️ 5. VIEW – Menyimpan Query sebagai Tampilan Virtual
 

@@ -1,4 +1,4 @@
-# 🎓📚 Sistem Informasi Jadwal Sidang Skripsi
+# 🎓 Sistem Informasi Penjadwalan Sidang Skripsi
 
 Sistem ini dirancang untuk mengelola **jadwal sidang skripsi mahasiswa**, termasuk menentukan peran dosen penguji, ruangan, dan pendataan mahasiswa. Proyek ini menyederhanakan alur manajemen akademik dalam proses sidang skripsi.
 
@@ -10,11 +10,11 @@ Berikut adalah diagram ERD dari sistem ini:
 
 ---
 
-# 📊 Langkah-Langkah Membuat Database Menggunakan Navicat
+## 📊 Langkah-Langkah Membuat Database Menggunakan Navicat
 
 Panduan ini menjelaskan langkah-langkah dasar untuk membuat database menggunakan **Navicat** mulai dari proses instalasi hingga pembuatan database.
 
-## 1. Download dan Install Navicat
+### 1. Download dan Install Navicat
 
 Unduh Navicat sesuai versi yang kamu butuhkan:
 
@@ -23,12 +23,12 @@ Unduh Navicat sesuai versi yang kamu butuhkan:
 
 > Jika menggunakan versi trial, kamu bisa klik "Free Trial" untuk mencoba gratis.
 
-##  2. Jalankan Navicat
+###  2. Jalankan Navicat
 
 Setelah instalasi selesai, buka aplikasi **Navicat**.
 
 
-## 3. Buat Koneksi Baru ke MySQL
+### 3. Buat Koneksi Baru ke MySQL
 
 1. Klik tombol **Connection → MySQL**.
 2. Masukkan detail koneksi:
@@ -39,7 +39,7 @@ Setelah instalasi selesai, buka aplikasi **Navicat**.
    - **Password**: sesuaikan dengan yang kamu pakai di MySQL
 3. Klik **Test Connection** → Jika berhasil, klik **OK**.
 
-##  4. Membuat Database Baru
+###  4. Membuat Database Baru
 
 1. Klik kanan pada koneksi MySQL yang telah dibuat.
 2. Pilih **New Database**.
@@ -47,7 +47,7 @@ Setelah instalasi selesai, buka aplikasi **Navicat**.
 4. Klik **OK**.
 
 
-## 5. Selesai
+### 5. Selesai
 
 Database berhasil dibuat! Selanjutnya kamu bisa membuat tabel, relasi, dan mengatur datanya sesuai kebutuhanmu.
 
@@ -115,11 +115,11 @@ Database berhasil dibuat! Selanjutnya kamu bisa membuat tabel, relasi, dan menga
 | `User ↔ Mahasiswa / Dosen` | **One to One** | Diasumsikan satu user hanya mewakili satu entitas (mahasiswa atau dosen) |
 
 ---
-# 📚 Dokumentasi Skrip SQL - Sistem Penjadwalan Sidang Skripsi
+## 📚 Dokumentasi Skrip SQL - Sistem Penjadwalan Sidang Skripsi
 
 Dokumentasi ini menjelaskan struktur database dan penggunaan perintah SQL dalam sistem penjadwalan sidang skripsi. Sistem ini membantu mengelola data mahasiswa, dosen, jadwal sidang, dan penguji secara otomatis dan konsisten.
 
-## 🧱 1. CREATE TABLE – Membuat Struktur Tabel
+### 1. CREATE TABLE – Membuat Struktur Tabel
 
 Perintah `CREATE TABLE` digunakan untuk membuat tabel-tabel utama dalam database. Setiap tabel menyimpan data yang berbeda-beda dan saling terhubung melalui **primary key** dan **foreign key**.
 
@@ -193,7 +193,7 @@ CREATE TABLE penguji_sidang (
 ```
 
 
-## ⚙️ 2. TRIGGER – Menjaga Otomatisasi & Konsistensi Data
+###  2. TRIGGER – Menjaga Otomatisasi & Konsistensi Data
 
 `TRIGGER` digunakan untuk melakukan **aksi otomatis** ketika data **ditambahkan**, **diperbarui**, atau **dihapus**. Dalam sistem ini, trigger digunakan agar:
 
@@ -256,7 +256,7 @@ FOR EACH ROW
 DELETE FROM User WHERE username = OLD.nidn;
 ```
 
-## 📝 3. INSERT DATA – Menambahkan Data Awal
+##  3. INSERT DATA – Menambahkan Data Awal
 
 Untuk keperluan testing atau demo, berikut contoh perintah `INSERT`:
 
@@ -279,7 +279,7 @@ INSERT INTO User (username, password, role) VALUES
 ```
 
 
-## 🔗 4. JOIN – Menggabungkan Data dari Beberapa Tabel
+###  4. JOIN – Menggabungkan Data dari Beberapa Tabel
 
 `JOIN` digunakan untuk menampilkan data gabungan dari beberapa tabel, misalnya untuk keperluan **laporan sidang**.
 
@@ -314,7 +314,7 @@ JOIN dosen d ON ps.nidn = d.nidn
 GROUP BY js.id_jadwal, m.npm, m.nama_mahasiswa, m.program_studi, js.waktu_sidang, r.nama_ruangan;
 ```
 
-## 👁️ 5. VIEW – Menyimpan Query sebagai Tampilan Virtual
+###  5. VIEW – Menyimpan Query sebagai Tampilan Virtual
 
 `VIEW` berfungsi menyimpan hasil `JOIN` sebagai tampilan virtual agar query lebih praktis dipanggil.
 
@@ -354,7 +354,7 @@ GROUP BY js.id_jadwal, m.npm, m.nama_mahasiswa, m.program_studi, js.waktu_sidang
 
 ---
 
-## 📌 Penutup
+### 📌 Penutup
 
 ✅ Sistem ini mendukung pengelolaan sidang yang terstruktur dan otomatis.  
 🛠️ Dengan **TRIGGER**, **JOIN**, dan **VIEW**, pengelolaan data lebih efisien dan minim kesalahan.  
